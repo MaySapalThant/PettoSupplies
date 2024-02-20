@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.petto.business.entity">
+	<class
+		name="Orders"
+		table="orders"
+		lazy="false"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="id"
+			type="integer"
+			column="order_id"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<property
+			name="totalQty"
+			column="total_qty"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="totalPrice"
+			column="total_price"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="paymentType"
+			column="payment_type"
+			type="string"
+			not-null="true"
+			length="50"
+		/>
+		<property
+			name="remark"
+			column="remark"
+			type="string"
+			not-null="false"
+			length="255"
+		/>
+		<property
+			name="status"
+			column="status"
+			type="string"
+			not-null="true"
+			length="50"
+		/>
+		<property
+			name="orderDate"
+			column="order_date"
+			type="date"
+			not-null="true"
+			length="10"
+		/>
+		<property
+			name="receiverName"
+			column="receiver_name"
+			type="string"
+			not-null="true"
+			length="255"
+		/>
+		<property
+			name="receiverPhone"
+			column="receiver_phone"
+			type="string"
+			not-null="true"
+			length="25"
+		/>
+		<property
+			name="receiverAddress"
+			column="receiver_address"
+			type="string"
+			not-null="true"
+			length="1000"
+		/>
+		<many-to-one
+			name="customer"
+			column="customer_id"
+			class="Customers"
+			not-null="true"
+		>
+		</many-to-one>
+	
+
+		<set name="orderdetails" inverse="true">
+			<key column="order_id"/>
+			<one-to-many class="Orderdetail"/>
+		</set>
+
+
+	</class>	
+</hibernate-mapping>

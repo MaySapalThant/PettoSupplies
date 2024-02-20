@@ -1,0 +1,38 @@
+.section-product-detail
+{
+    margin-top: 100px  
+}
+
+.container{
+    box-shadow: 5px 10px 8px 10px #e7dede;
+    padding: 30px; 
+}
+
+.container-gallery{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main_view{
+    width: 100%;
+    height: 20rem;
+    
+}
+.main_view img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    box-shadow: 1px 1px 2px 2px #e7dede;
+}
+.side_view{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.side_view img{
+    width: 7rem;
+    height: 5rem;
+    object-fit: cover;
+    cursor: pointer;
+    margin:0.5rem;
+}

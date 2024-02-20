@@ -1,0 +1,42 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<!-- <bean id="idXxxxService" class="com.frame.business.service.XxxService"> 
+		<property name="myXxxDao" ref="idXxxDao" /> </bean> -->
+	<bean id="idAdminService" class="com.petto.business.service.AdminService"> 
+		<property name="myAdminDao" ref="idAdminDao" /></bean> 	
+		
+	<bean id="idPetService" class="com.petto.business.service.PetService"> 
+		<property name="myPetDao" ref="idPetDao" /></bean> 
+		
+	<bean id="idCategoryService" class="com.petto.business.service.CategoryService"> 
+		<property name="myCategoryDao" ref="idCategoryDao" />
+		<property name="myPetDao" ref="idPetDao" /></bean> 
+		
+	<bean id="idItemService" class="com.petto.business.service.ItemService"> 
+		<property name="myItemDao" ref="idItemDao" />
+		<property name="myCategoryDao" ref="idCategoryDao" />
+		<property name="myPetDao" ref="idPetDao" /></bean>
+		
+	<bean id="idCustomerService" class="com.petto.business.service.CustomerService"> 
+		<property name="myCustomerDao" ref="idCustomerDao" /></bean> 
+		
+		
+		<!-- User Side -->
+	<bean id="idHomeService" class="com.petto.business.service.HomeService"> 
+		<property name="myItemDao" ref="idItemDao" />
+		<property name="myCategoryDao" ref="idCategoryDao" />
+		<property name="myPetDao" ref="idPetDao" /></bean> 
+		
+	<bean id="idPetPageService" class="com.petto.business.service.PetPageService"> 
+		<property name="myItemDao" ref="idItemDao" />
+		<property name="myCategoryDao" ref="idCategoryDao" />
+		<property name="myPetDao" ref="idPetDao" /></bean> 
+		
+	<bean id="idOrderService" class="com.petto.business.service.OrderService"> 
+		<property name="myOrderDao" ref="idOrderDao" />
+		<property name="myOrderDetailDao" ref="idOrderDetailDao" />
+		</bean>
+		
+</beans>

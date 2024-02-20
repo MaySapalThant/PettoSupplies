@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.petto.business.entity">
+	<class
+		name="Categories"
+		table="categories"
+		lazy="false"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="id"
+			type="integer"
+			column="category_id"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<property
+			name="categoryName"
+			column="category_name"
+			type="string"
+			not-null="true"
+			length="255"
+		/>
+		<many-to-one
+			name="pet"
+			column="pet_id"
+			class="Pets"
+			not-null="true"
+		>
+		</many-to-one>
+	
+
+		<set name="items" inverse="true">
+			<key column="category_id"/>
+			<one-to-many class="Items"/>
+		</set>
+
+
+	</class>	
+</hibernate-mapping>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.petto.business.entity">
+	<class
+		name="Pets"
+		table="pets"
+		lazy="false"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="id"
+			type="integer"
+			column="pet_id"
+		>
+			<generator class="identity"/>
+		</id>
+
+		<property
+			name="petName"
+			column="pet_name"
+			type="string"
+			not-null="true"
+			length="255"
+		/>
+		<property
+			name="petImage"
+			column="pet_image"
+			type="string"
+			not-null="false"
+			length="1000"
+		/>
+	
+
+		<set name="categories" inverse="true">
+			<key column="pet_id"/>
+			<one-to-many class="Categories"/>
+		</set>
+
+
+	</class>	
+</hibernate-mapping>

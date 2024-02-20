@@ -1,0 +1,155 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<!-- <bean name="/xxxPath" class="com.frame.presentation.action.XxxAction"> 
+		<property name="myXxxService" ref="idXxxService" /> </bean> --> 
+		
+	<bean name="/adminDashboardPath" class="com.petto.presentation.action.AdminDashboardAction"> 
+		
+		<property name="myItemService" ref="idItemService" />
+		<property name="myOrderService" ref="idOrderService" /> 
+		<property name="myCustomerService" ref="idCustomerService" />
+	</bean> 
+	
+	 <bean name="/adminLoginPath" class="com.petto.presentation.action.AdminLoginAction"> 
+		<property name="myAdminService" ref="idAdminService" />
+		<property name="myItemService" ref="idItemService" />
+		<property name="myOrderService" ref="idOrderService" /> 
+		<property name="myCustomerService" ref="idCustomerService" />
+	</bean> 
+		
+	<bean name="/adminLogoutPath" class="com.petto.presentation.action.AdminLogoutAction"> </bean>
+	 
+	 <bean name="/adminAllPetPath" class="com.petto.presentation.action.AdminPetAction"> 
+		<property name="myPetService" ref="idPetService" /> </bean>
+	
+	<bean name="/adminPetAddPathFirst" class="com.petto.presentation.action.AdminPetAddAction"> 
+		<property name="myPetService" ref="idPetService" /> </bean> 
+			
+	 <bean name="/adminPetAddPath" class="com.petto.presentation.action.AdminPetAddAction"> 
+		<property name="myPetService" ref="idPetService" /> </bean> 
+		
+	<bean name="/adminPetEditPathFirst" class="com.petto.presentation.action.AdminPetEditAction"> 
+		<property name="myPetService" ref="idPetService" /> </bean> 
+			
+	<bean name="/adminPetEditPath" class="com.petto.presentation.action.AdminPetEditAction"> 
+		<property name="myPetService" ref="idPetService" /> </bean> 
+	
+	<bean name="/adminAllCategoryPath" class="com.petto.presentation.action.AdminCategoryAction"> 
+		<property name="myCategoryService" ref="idCategoryService" /> </bean> 
+		
+	<bean name="/adminCategoryAddPathFirst" class="com.petto.presentation.action.AdminCategoryAddAction"> 
+		<property name="myCategoryService" ref="idCategoryService" /> </bean>
+		
+	<bean name="/adminCategoryAddPath" class="com.petto.presentation.action.AdminCategoryAddAction"> 
+		<property name="myCategoryService" ref="idCategoryService" /> </bean>
+	
+	<bean name="/adminCategoryEditPathFirst" class="com.petto.presentation.action.AdminCategoryEditAction"> 
+		<property name="myCategoryService" ref="idCategoryService" />
+		<property name="myPetService" ref="idPetService" /> </bean>
+			
+	<bean name="/adminCategoryEditPath" class="com.petto.presentation.action.AdminCategoryEditAction"> 
+		<property name="myCategoryService" ref="idCategoryService" />
+		<property name="myPetService" ref="idPetService" /> </bean>
+		
+	<bean name="/adminAllItemPath" class="com.petto.presentation.action.AdminItemAction"> 
+		<property name="myItemService" ref="idItemService" /> </bean>
+	
+	<bean name="/adminItemAddPathFirst" class="com.petto.presentation.action.AdminItemAddAction"> 
+		<property name="myItemService" ref="idItemService" /> </bean>
+		
+	<bean name="/adminItemAddPath" class="com.petto.presentation.action.AdminItemAddAction"> 
+		<property name="myItemService" ref="idItemService" /> </bean>
+	
+	<bean name="/adminItemEditPathFirst" class="com.petto.presentation.action.AdminItemEditAction"> 
+		<property name="myItemService" ref="idItemService" /> </bean> 
+			
+	<bean name="/adminItemEditPath" class="com.petto.presentation.action.AdminItemEditAction"> 
+		<property name="myItemService" ref="idItemService" /> </bean> 
+		
+	<bean name="/adminAllCustomerPath" class="com.petto.presentation.action.AdminCustomerAction"> 
+		<property name="myCustomerService" ref="idCustomerService" /> </bean> 
+		
+	<bean name="/adminAllOrderPath" class="com.petto.presentation.action.AdminOrderAction"> 
+		<property name="myOrderService" ref="idOrderService" /> </bean>	
+		
+	<bean name="/adminOrderConfirmPath" class="com.petto.presentation.action.AdminOrderConfirmAction"> 
+		<property name="myOrderService" ref="idOrderService" /> </bean> 
+	
+	<bean name="/adminOrderDetailPath" class="com.petto.presentation.action.AdminOrderDetailAction"> 
+		<property name="myOrderService" ref="idOrderService" /> </bean>	
+		
+	<bean name="/adminProfileUpdatePathFirst" class="com.petto.presentation.action.AdminProfileUpdateAction"> 
+		<property name="myAdminService" ref="idAdminService" /> </bean>
+		
+	<bean name="/adminProfileUpdatePath" class="com.petto.presentation.action.AdminProfileUpdateAction"> 
+		<property name="myAdminService" ref="idAdminService" /> </bean> 
+		
+	<bean name="/adminChangePasswordPathFirst" class="com.petto.presentation.action.AdminChangePasswordAction"> 
+		<property name="myAdminService" ref="idAdminService" /> </bean>
+		
+	<bean name="/adminChangePasswordPath" class="com.petto.presentation.action.AdminChangePasswordAction"> 
+		<property name="myAdminService" ref="idAdminService" /> </bean>
+		
+		<!-- User Side -->
+	<bean name="/homePath" class="com.petto.presentation.action.HomeAction"> 
+		<property name="myHomeService" ref="idHomeService" /> 
+		<property name="myItemService" ref="idItemService" />
+	</bean> 
+		
+	<bean name="/petPagePath" class="com.petto.presentation.action.PetPageAction"> 
+		<property name="myPetPageService" ref="idPetPageService" /> </bean> 
+		
+	<bean name="/categoryPagePath" class="com.petto.presentation.action.CategoryPageAction"> 
+		<property name="myPetPageService" ref="idPetPageService" /> </bean> 
+		
+	<bean name="/itemDetailPath" class="com.petto.presentation.action.ItemDetailAction"> 
+		<property name="myPetPageService" ref="idPetPageService" /> </bean> 
+		
+	<bean name="/addToCartPath" class="com.petto.presentation.action.CartAction"> 
+		<property name="myItemService" ref="idItemService" /> </bean> 
+	
+	<bean name="/loginPathFirst" class="com.petto.presentation.action.LoginAction"> 
+		<property name="myCustomerService" ref="idCustomerService" /> </bean> 	
+		
+	<bean name="/loginPath" class="com.petto.presentation.action.LoginAction"> 
+		<property name="myCustomerService" ref="idCustomerService" /> </bean> 
+	
+	<bean name="/logoutPath" class="com.petto.presentation.action.LogoutAction"> 
+		<property name="myHomeService" ref="idHomeService" /></bean>
+	
+	<bean name="/registerPathFirst" class="com.petto.presentation.action.RegisterAction"> 
+		<property name="myCustomerService" ref="idCustomerService" /> </bean>
+		
+	<bean name="/registerPath" class="com.petto.presentation.action.RegisterAction"> 
+		<property name="myCustomerService" ref="idCustomerService" /> </bean> 
+		
+	<bean name="/profileUpdatePathFirst" class="com.petto.presentation.action.ProfileUpdateAction"> 
+		<property name="myCustomerService" ref="idCustomerService" /> </bean> 	
+		
+	<bean name="/profileUpdatePath" class="com.petto.presentation.action.ProfileUpdateAction"> 
+		<property name="myCustomerService" ref="idCustomerService" /> </bean> 
+		
+	<bean name="/changePasswordPathFirst" class="com.petto.presentation.action.CustomerChangePasswordAction"> 
+		<property name="myCustomerService" ref="idCustomerService" /> </bean> 	
+		
+	<bean name="/changePasswordPath" class="com.petto.presentation.action.CustomerChangePasswordAction"> 
+		<property name="myCustomerService" ref="idCustomerService" /> </bean> 
+		
+	<bean name="/checkoutPathFirst" class="com.petto.presentation.action.CheckoutAction"> 
+		<property name="myOrderService" ref="idOrderService" /> </bean>
+		
+	<bean name="/checkoutPath" class="com.petto.presentation.action.CheckoutAction"> 
+		<property name="myItemService" ref="idItemService" /> 
+		<property name="myOrderService" ref="idOrderService" /> </bean>	
+		
+	<bean name="/customerOrderPath" class="com.petto.presentation.action.CustomerOrderHistoryAction"> 
+		<property name="myOrderService" ref="idOrderService" /> </bean> 
+		
+	<bean name="/customerOrderDetailPath" class="com.petto.presentation.action.CustomerOrderDetailAction"> 
+		<property name="myOrderService" ref="idOrderService" /> </bean> 
+		
+	<bean name="/searchItemPath" class="com.petto.presentation.action.SearchItemAction"> 
+		<property name="myPetPageService" ref="idPetPageService" /> </bean> 
+</beans>

@@ -1,0 +1,72 @@
+.navbar{
+    background-color: #e3edfd;
+}
+
+.menu-bar{
+    background-color: #e3edfd;
+}
+
+.list-group a{
+    background-color: #e3edfd;
+}
+
+.item-table-container{
+    /*height: 500px;*/
+    overflow: auto;
+    display: inline-block; 
+}
+
+.order-detail-table-container{
+    height: 350px;
+    overflow: auto;
+    display: inline-block; 
+}
+
+.order-table-container{
+    height: 250px;
+    overflow: auto;
+    display: inline-block; 
+}
+
+.item-table .thead{
+    background-color: #e3edfd;    
+}
+
+.item-table{
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.item-table .item-name{
+    width: 15%;
+    /*border-right: 1px solid black;*/
+}
+
+.order-detail-table-container .item-name{
+    width: 40%;
+}
+
+.item-table .item-description{
+    width: 50%;
+    /*border-right: 1px solid black;*/
+}
+
+
+.img-container{
+    width: 100%;
+}
+
+.img-container img{
+    width: 5rem;
+    height: 3rem;
+    object-fit: contain;
+}
+
+.add-new-container label{
+    color: rgb(121, 121, 121);
+}
+
+.nav-hover:hover{
+color: blue;
+}

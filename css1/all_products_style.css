@@ -1,0 +1,25 @@
+.section-shop-category{
+    margin-top: 100px;
+}
+
+.products-frame{
+        height: 100vh;
+        overflow: scroll;
+        padding-top: 30px;
+}
+
+table th{
+    padding: 10px; 
+    background-color: #ff8c86;
+    color: white;
+    border-collapse: collapse;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+table td {
+    padding: 10px;
+    border: 1px solid #ffdbea;
+    border-collapse: collapse;
+    background-color: #faf0ea;
+}
+
