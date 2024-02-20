@@ -32,27 +32,27 @@ The admin team contact the customer by email or phone for further payment proces
 Profile Update
 Change Password
 
-## CRUD Pets
+### CRUD Pets
 Create new pet
 View all pets
 Update existing pet
 Delete pets
 
-## CRUD Categories
+### CRUD Categories
 Create new category
 View all categories
 Update existing category
 Delete categories
 
-## CRUD Items
+### CRUD Items
 Create new item
 View all items
 Update existing item
 Delete items
 
-## View Customers Info
+### View Customers Info
 View the customers' information
 
-## View and Confirm Customers' Orders
+### View and Confirm Customers' Orders
 View the order detail
 Confirm the order
