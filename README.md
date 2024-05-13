@@ -2,9 +2,6 @@
 Pet Needs is a online pet supplies shop. 
 Providing pet foods, pet care products and accessories for different pets like dogs, cats and fish.
 
-### Live Demo
-[Live Demo](https://maysapalthant.github.io/PettoSupplies/).
-
 ## Functions
 
 ## User Profile
